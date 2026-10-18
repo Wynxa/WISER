@@ -1,0 +1,173 @@
+{
+  "meta": {
+    "version": "v4",
+    "description": "Context-aware PPE policies where near indicates work context and next_to indicates hazardous close-range exposure."
+  },
+  "default_safe_label": "safe",
+  "contexts": [
+    {
+      "context_id": "mechanical_operation",
+      "context_text": "mechanical operation",
+      "relation_type": "mechanical_operation",
+      "priority": 130,
+      "description": "Workers operating excavators must wear helmet and vest.",
+      "match_mode": "any",
+      "trigger_relations": [
+        {
+          "predicate": "operating",
+          "object_name": "excavator"
+        }
+      ],
+      "required_ppe": [
+        "helmet",
+        "vest"
+      ]
+    },
+    {
+      "context_id": "dangerous_approach_to_excavator",
+      "context_text": "dangerous approach to excavator",
+      "relation_type": "hazardous_proximity",
+      "priority": 120,
+      "description": "Workers next to excavators are treated as hazardous close-range exposure and must wear helmet and vest.",
+      "match_mode": "any",
+      "trigger_relations": [
+        {
+          "predicate": "next_to",
+          "object_name": "excavator"
+        }
+      ],
+      "required_ppe": [
+        "helmet",
+        "vest"
+      ]
+    },
+    {
+      "context_id": "dangerous_approach_to_edge",
+      "context_text": "dangerous approach to edge",
+      "relation_type": "hazardous_proximity",
+      "priority": 115,
+      "description": "Workers next to unprotected edges are treated as hazardous close-range exposure and must wear helmet and vest.",
+      "match_mode": "any",
+      "trigger_relations": [
+        {
+          "predicate": "next_to",
+          "object_name": "unprotected_edge"
+        }
+      ],
+      "required_ppe": [
+        "helmet",
+        "vest"
+      ]
+    },
+    {
+      "context_id": "tool_operation",
+      "context_text": "tool operation",
+      "relation_type": "tool_operation",
+      "priority": 100,
+      "description": "Workers using tools must wear helmet, vest, and gloves.",
+      "match_mode": "any",
+      "trigger_relations": [
+        {
+          "predicate": "using",
+          "object_name": "tools"
+        }
+      ],
+      "required_ppe": [
+        "helmet",
+        "vest",
+        "gloves"
+      ]
+    },
+    {
+      "context_id": "rebar_work",
+      "context_text": "rebar work",
+      "relation_type": "work_context",
+      "priority": 90,
+      "description": "Workers in rebar work context must wear helmet, vest, and gloves.",
+      "match_mode": "any",
+      "trigger_relations": [
+        {
+          "predicate": "near",
+          "object_name": "rebar_zone"
+        },
+        {
+          "predicate": "standing_on",
+          "object_name": "rebar_zone"
+        }
+      ],
+      "required_ppe": [
+        "helmet",
+        "vest",
+        "gloves"
+      ]
+    },
+    {
+      "context_id": "scaffold_work",
+      "context_text": "scaffold work",
+      "relation_type": "work_context",
+      "priority": 85,
+      "description": "Workers standing on scaffolds are in scaffold work context and must wear helmet and vest.",
+      "match_mode": "any",
+      "trigger_relations": [
+        {
+          "predicate": "standing_on",
+          "object_name": "scaffold"
+        }
+      ],
+      "required_ppe": [
+        "helmet",
+        "vest"
+      ]
+    },
+    {
+      "context_id": "bricklaying_work",
+      "context_text": "bricklaying work",
+      "relation_type": "work_context",
+      "priority": 80,
+      "description": "Workers in bricklaying work context must wear helmet, vest, and gloves.",
+      "match_mode": "any",
+      "trigger_relations": [
+        {
+          "predicate": "near",
+          "object_name": "bricklaying_zone"
+        }
+      ],
+      "required_ppe": [
+        "helmet",
+        "vest",
+        "gloves"
+      ]
+    },
+    {
+      "context_id": "edge_work_context",
+      "context_text": "edge work context",
+      "relation_type": "work_context",
+      "priority": 70,
+      "description": "Workers near unprotected edges are in edge-work context and should wear helmet and vest.",
+      "match_mode": "any",
+      "trigger_relations": [
+        {
+          "predicate": "near",
+          "object_name": "unprotected_edge"
+        }
+      ],
+      "required_ppe": [
+        "helmet",
+        "vest"
+      ]
+    },
+    {
+      "context_id": "general_work",
+      "context_text": "general work",
+      "relation_type": "routine_work",
+      "priority": 10,
+      "description": "Default general work context requires helmet and vest.",
+      "match_mode": "default",
+      "trigger_relations": [],
+      "required_ppe": [
+        "helmet",
+        "vest"
+      ]
+    }
+  ]
+}

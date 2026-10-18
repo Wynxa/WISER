@@ -1,0 +1,826 @@
+{
+  "meta": {
+    "version": "v1",
+    "description": "Rule-side prototype inventory for dual-encoder hazard reasoning.",
+    "label_space": "major_label",
+    "positive_assignment": "safe samples match safe prototypes within the same context; unsafe samples match all prototypes under the same major label."
+  },
+  "summary": {
+    "num_major_labels": 10,
+    "num_prototype_groups": 18,
+    "num_prototypes": 45
+  },
+  "prototype_groups": [
+    {
+      "group_id": "safe::bricklaying_work",
+      "major_label": "safe",
+      "major_label_id": 7,
+      "context_id": "bricklaying_work",
+      "risk_level": "safe",
+      "required_ppe": [
+        "helmet",
+        "vest",
+        "gloves"
+      ],
+      "num_prototypes": 2,
+      "num_samples": 10,
+      "prototype_ids": [
+        "safe::bricklaying_work::0",
+        "safe::bricklaying_work::1"
+      ]
+    },
+    {
+      "group_id": "safe::dangerous_approach_to_edge",
+      "major_label": "safe",
+      "major_label_id": 7,
+      "context_id": "dangerous_approach_to_edge",
+      "risk_level": "safe",
+      "required_ppe": [
+        "helmet",
+        "vest"
+      ],
+      "num_prototypes": 2,
+      "num_samples": 12,
+      "prototype_ids": [
+        "safe::dangerous_approach_to_edge::0",
+        "safe::dangerous_approach_to_edge::1"
+      ]
+    },
+    {
+      "group_id": "safe::dangerous_approach_to_excavator",
+      "major_label": "safe",
+      "major_label_id": 7,
+      "context_id": "dangerous_approach_to_excavator",
+      "risk_level": "safe",
+      "required_ppe": [
+        "helmet",
+        "vest"
+      ],
+      "num_prototypes": 2,
+      "num_samples": 15,
+      "prototype_ids": [
+        "safe::dangerous_approach_to_excavator::0",
+        "safe::dangerous_approach_to_excavator::1"
+      ]
+    },
+    {
+      "group_id": "safe::edge_work_context",
+      "major_label": "safe",
+      "major_label_id": 7,
+      "context_id": "edge_work_context",
+      "risk_level": "safe",
+      "required_ppe": [
+        "helmet",
+        "vest"
+      ],
+      "num_prototypes": 2,
+      "num_samples": 26,
+      "prototype_ids": [
+        "safe::edge_work_context::0",
+        "safe::edge_work_context::1"
+      ]
+    },
+    {
+      "group_id": "safe::general_work",
+      "major_label": "safe",
+      "major_label_id": 7,
+      "context_id": "general_work",
+      "risk_level": "safe",
+      "required_ppe": [
+        "helmet",
+        "vest"
+      ],
+      "num_prototypes": 2,
+      "num_samples": 2243,
+      "prototype_ids": [
+        "safe::general_work::0",
+        "safe::general_work::1"
+      ]
+    },
+    {
+      "group_id": "safe::mechanical_operation",
+      "major_label": "safe",
+      "major_label_id": 7,
+      "context_id": "mechanical_operation",
+      "risk_level": "safe",
+      "required_ppe": [
+        "helmet",
+        "vest"
+      ],
+      "num_prototypes": 2,
+      "num_samples": 2,
+      "prototype_ids": [
+        "safe::mechanical_operation::0",
+        "safe::mechanical_operation::1"
+      ]
+    },
+    {
+      "group_id": "safe::rebar_work",
+      "major_label": "safe",
+      "major_label_id": 7,
+      "context_id": "rebar_work",
+      "risk_level": "safe",
+      "required_ppe": [
+        "helmet",
+        "vest",
+        "gloves"
+      ],
+      "num_prototypes": 2,
+      "num_samples": 150,
+      "prototype_ids": [
+        "safe::rebar_work::0",
+        "safe::rebar_work::1"
+      ]
+    },
+    {
+      "group_id": "safe::scaffold_work",
+      "major_label": "safe",
+      "major_label_id": 7,
+      "context_id": "scaffold_work",
+      "risk_level": "safe",
+      "required_ppe": [
+        "helmet",
+        "vest"
+      ],
+      "num_prototypes": 2,
+      "num_samples": 72,
+      "prototype_ids": [
+        "safe::scaffold_work::0",
+        "safe::scaffold_work::1"
+      ]
+    },
+    {
+      "group_id": "safe::tool_operation",
+      "major_label": "safe",
+      "major_label_id": 7,
+      "context_id": "tool_operation",
+      "risk_level": "safe",
+      "required_ppe": [
+        "helmet",
+        "vest",
+        "gloves"
+      ],
+      "num_prototypes": 2,
+      "num_samples": 15,
+      "prototype_ids": [
+        "safe::tool_operation::0",
+        "safe::tool_operation::1"
+      ]
+    },
+    {
+      "group_id": "bricklaying_work_unsafe",
+      "major_label": "bricklaying_work_unsafe",
+      "major_label_id": 0,
+      "context_id": "bricklaying_work",
+      "risk_level": "unsafe",
+      "required_ppe": [
+        "helmet",
+        "vest",
+        "gloves"
+      ],
+      "num_prototypes": 3,
+      "num_samples": 155,
+      "prototype_ids": [
+        "bricklaying_work_unsafe::0",
+        "bricklaying_work_unsafe::1",
+        "bricklaying_work_unsafe::2"
+      ]
+    },
+    {
+      "group_id": "dangerous_approach_to_edge_unsafe",
+      "major_label": "dangerous_approach_to_edge_unsafe",
+      "major_label_id": 1,
+      "context_id": "dangerous_approach_to_edge",
+      "risk_level": "unsafe",
+      "required_ppe": [
+        "helmet",
+        "vest"
+      ],
+      "num_prototypes": 3,
+      "num_samples": 151,
+      "prototype_ids": [
+        "dangerous_approach_to_edge_unsafe::0",
+        "dangerous_approach_to_edge_unsafe::1",
+        "dangerous_approach_to_edge_unsafe::2"
+      ]
+    },
+    {
+      "group_id": "dangerous_approach_to_excavator_unsafe",
+      "major_label": "dangerous_approach_to_excavator_unsafe",
+      "major_label_id": 2,
+      "context_id": "dangerous_approach_to_excavator",
+      "risk_level": "unsafe",
+      "required_ppe": [
+        "helmet",
+        "vest"
+      ],
+      "num_prototypes": 3,
+      "num_samples": 494,
+      "prototype_ids": [
+        "dangerous_approach_to_excavator_unsafe::0",
+        "dangerous_approach_to_excavator_unsafe::1",
+        "dangerous_approach_to_excavator_unsafe::2"
+      ]
+    },
+    {
+      "group_id": "edge_work_context_unsafe",
+      "major_label": "edge_work_context_unsafe",
+      "major_label_id": 3,
+      "context_id": "edge_work_context",
+      "risk_level": "unsafe",
+      "required_ppe": [
+        "helmet",
+        "vest"
+      ],
+      "num_prototypes": 3,
+      "num_samples": 79,
+      "prototype_ids": [
+        "edge_work_context_unsafe::0",
+        "edge_work_context_unsafe::1",
+        "edge_work_context_unsafe::2"
+      ]
+    },
+    {
+      "group_id": "general_work_unsafe",
+      "major_label": "general_work_unsafe",
+      "major_label_id": 4,
+      "context_id": "general_work",
+      "risk_level": "unsafe",
+      "required_ppe": [
+        "helmet",
+        "vest"
+      ],
+      "num_prototypes": 3,
+      "num_samples": 11971,
+      "prototype_ids": [
+        "general_work_unsafe::0",
+        "general_work_unsafe::1",
+        "general_work_unsafe::2"
+      ]
+    },
+    {
+      "group_id": "mechanical_operation_unsafe",
+      "major_label": "mechanical_operation_unsafe",
+      "major_label_id": 5,
+      "context_id": "mechanical_operation",
+      "risk_level": "unsafe",
+      "required_ppe": [
+        "helmet",
+        "vest"
+      ],
+      "num_prototypes": 3,
+      "num_samples": 1111,
+      "prototype_ids": [
+        "mechanical_operation_unsafe::0",
+        "mechanical_operation_unsafe::1",
+        "mechanical_operation_unsafe::2"
+      ]
+    },
+    {
+      "group_id": "rebar_work_unsafe",
+      "major_label": "rebar_work_unsafe",
+      "major_label_id": 6,
+      "context_id": "rebar_work",
+      "risk_level": "unsafe",
+      "required_ppe": [
+        "helmet",
+        "vest",
+        "gloves"
+      ],
+      "num_prototypes": 3,
+      "num_samples": 3010,
+      "prototype_ids": [
+        "rebar_work_unsafe::0",
+        "rebar_work_unsafe::1",
+        "rebar_work_unsafe::2"
+      ]
+    },
+    {
+      "group_id": "scaffold_work_unsafe",
+      "major_label": "scaffold_work_unsafe",
+      "major_label_id": 8,
+      "context_id": "scaffold_work",
+      "risk_level": "unsafe",
+      "required_ppe": [
+        "helmet",
+        "vest"
+      ],
+      "num_prototypes": 3,
+      "num_samples": 493,
+      "prototype_ids": [
+        "scaffold_work_unsafe::0",
+        "scaffold_work_unsafe::1",
+        "scaffold_work_unsafe::2"
+      ]
+    },
+    {
+      "group_id": "tool_operation_unsafe",
+      "major_label": "tool_operation_unsafe",
+      "major_label_id": 9,
+      "context_id": "tool_operation",
+      "risk_level": "unsafe",
+      "required_ppe": [
+        "helmet",
+        "vest",
+        "gloves"
+      ],
+      "num_prototypes": 3,
+      "num_samples": 506,
+      "prototype_ids": [
+        "tool_operation_unsafe::0",
+        "tool_operation_unsafe::1",
+        "tool_operation_unsafe::2"
+      ]
+    }
+  ],
+  "prototypes": [
+    {
+      "prototype_id": "safe::bricklaying_work::0",
+      "prototype_group": "safe::bricklaying_work",
+      "major_label": "safe",
+      "major_label_id": 7,
+      "context_id": "bricklaying_work",
+      "risk_level": "safe",
+      "text": "worker in bricklaying work wears helmet, vest, and gloves"
+    },
+    {
+      "prototype_id": "safe::bricklaying_work::1",
+      "prototype_group": "safe::bricklaying_work",
+      "major_label": "safe",
+      "major_label_id": 7,
+      "context_id": "bricklaying_work",
+      "risk_level": "safe",
+      "text": "worker in bricklaying work correctly wears helmet, vest, and gloves"
+    },
+    {
+      "prototype_id": "safe::dangerous_approach_to_edge::0",
+      "prototype_group": "safe::dangerous_approach_to_edge",
+      "major_label": "safe",
+      "major_label_id": 7,
+      "context_id": "dangerous_approach_to_edge",
+      "risk_level": "safe",
+      "text": "worker in dangerous approach to edge wears helmet and vest"
+    },
+    {
+      "prototype_id": "safe::dangerous_approach_to_edge::1",
+      "prototype_group": "safe::dangerous_approach_to_edge",
+      "major_label": "safe",
+      "major_label_id": 7,
+      "context_id": "dangerous_approach_to_edge",
+      "risk_level": "safe",
+      "text": "worker in dangerous approach to edge correctly wears helmet and vest"
+    },
+    {
+      "prototype_id": "safe::dangerous_approach_to_excavator::0",
+      "prototype_group": "safe::dangerous_approach_to_excavator",
+      "major_label": "safe",
+      "major_label_id": 7,
+      "context_id": "dangerous_approach_to_excavator",
+      "risk_level": "safe",
+      "text": "worker in dangerous approach to excavator wears helmet and vest"
+    },
+    {
+      "prototype_id": "safe::dangerous_approach_to_excavator::1",
+      "prototype_group": "safe::dangerous_approach_to_excavator",
+      "major_label": "safe",
+      "major_label_id": 7,
+      "context_id": "dangerous_approach_to_excavator",
+      "risk_level": "safe",
+      "text": "worker in dangerous approach to excavator correctly wears helmet and vest"
+    },
+    {
+      "prototype_id": "safe::edge_work_context::0",
+      "prototype_group": "safe::edge_work_context",
+      "major_label": "safe",
+      "major_label_id": 7,
+      "context_id": "edge_work_context",
+      "risk_level": "safe",
+      "text": "worker in edge work context wears helmet and vest"
+    },
+    {
+      "prototype_id": "safe::edge_work_context::1",
+      "prototype_group": "safe::edge_work_context",
+      "major_label": "safe",
+      "major_label_id": 7,
+      "context_id": "edge_work_context",
+      "risk_level": "safe",
+      "text": "worker in edge work context correctly wears helmet and vest"
+    },
+    {
+      "prototype_id": "safe::general_work::0",
+      "prototype_group": "safe::general_work",
+      "major_label": "safe",
+      "major_label_id": 7,
+      "context_id": "general_work",
+      "risk_level": "safe",
+      "text": "worker in general work wears helmet and vest"
+    },
+    {
+      "prototype_id": "safe::general_work::1",
+      "prototype_group": "safe::general_work",
+      "major_label": "safe",
+      "major_label_id": 7,
+      "context_id": "general_work",
+      "risk_level": "safe",
+      "text": "worker in general work correctly wears helmet and vest"
+    },
+    {
+      "prototype_id": "safe::mechanical_operation::0",
+      "prototype_group": "safe::mechanical_operation",
+      "major_label": "safe",
+      "major_label_id": 7,
+      "context_id": "mechanical_operation",
+      "risk_level": "safe",
+      "text": "worker in mechanical operation wears helmet and vest"
+    },
+    {
+      "prototype_id": "safe::mechanical_operation::1",
+      "prototype_group": "safe::mechanical_operation",
+      "major_label": "safe",
+      "major_label_id": 7,
+      "context_id": "mechanical_operation",
+      "risk_level": "safe",
+      "text": "worker in mechanical operation correctly wears helmet and vest"
+    },
+    {
+      "prototype_id": "safe::rebar_work::0",
+      "prototype_group": "safe::rebar_work",
+      "major_label": "safe",
+      "major_label_id": 7,
+      "context_id": "rebar_work",
+      "risk_level": "safe",
+      "text": "worker in rebar work wears helmet, vest, and gloves"
+    },
+    {
+      "prototype_id": "safe::rebar_work::1",
+      "prototype_group": "safe::rebar_work",
+      "major_label": "safe",
+      "major_label_id": 7,
+      "context_id": "rebar_work",
+      "risk_level": "safe",
+      "text": "worker in rebar work correctly wears helmet, vest, and gloves"
+    },
+    {
+      "prototype_id": "safe::scaffold_work::0",
+      "prototype_group": "safe::scaffold_work",
+      "major_label": "safe",
+      "major_label_id": 7,
+      "context_id": "scaffold_work",
+      "risk_level": "safe",
+      "text": "worker in scaffold work wears helmet and vest"
+    },
+    {
+      "prototype_id": "safe::scaffold_work::1",
+      "prototype_group": "safe::scaffold_work",
+      "major_label": "safe",
+      "major_label_id": 7,
+      "context_id": "scaffold_work",
+      "risk_level": "safe",
+      "text": "worker in scaffold work correctly wears helmet and vest"
+    },
+    {
+      "prototype_id": "safe::tool_operation::0",
+      "prototype_group": "safe::tool_operation",
+      "major_label": "safe",
+      "major_label_id": 7,
+      "context_id": "tool_operation",
+      "risk_level": "safe",
+      "text": "worker in tool operation wears helmet, vest, and gloves"
+    },
+    {
+      "prototype_id": "safe::tool_operation::1",
+      "prototype_group": "safe::tool_operation",
+      "major_label": "safe",
+      "major_label_id": 7,
+      "context_id": "tool_operation",
+      "risk_level": "safe",
+      "text": "worker in tool operation correctly wears helmet, vest, and gloves"
+    },
+    {
+      "prototype_id": "bricklaying_work_unsafe::0",
+      "prototype_group": "bricklaying_work_unsafe",
+      "major_label": "bricklaying_work_unsafe",
+      "major_label_id": 0,
+      "context_id": "bricklaying_work",
+      "risk_level": "unsafe",
+      "text": "worker in bricklaying work is missing one or more of helmet, vest, and gloves"
+    },
+    {
+      "prototype_id": "bricklaying_work_unsafe::1",
+      "prototype_group": "bricklaying_work_unsafe",
+      "major_label": "bricklaying_work_unsafe",
+      "major_label_id": 0,
+      "context_id": "bricklaying_work",
+      "risk_level": "unsafe",
+      "text": "worker in bricklaying work does not fully wear helmet, vest, and gloves"
+    },
+    {
+      "prototype_id": "bricklaying_work_unsafe::2",
+      "prototype_group": "bricklaying_work_unsafe",
+      "major_label": "bricklaying_work_unsafe",
+      "major_label_id": 0,
+      "context_id": "bricklaying_work",
+      "risk_level": "unsafe",
+      "text": "worker in bricklaying work violates the required ppe rule"
+    },
+    {
+      "prototype_id": "dangerous_approach_to_edge_unsafe::0",
+      "prototype_group": "dangerous_approach_to_edge_unsafe",
+      "major_label": "dangerous_approach_to_edge_unsafe",
+      "major_label_id": 1,
+      "context_id": "dangerous_approach_to_edge",
+      "risk_level": "unsafe",
+      "text": "worker in dangerous approach to edge is missing one or more of helmet and vest"
+    },
+    {
+      "prototype_id": "dangerous_approach_to_edge_unsafe::1",
+      "prototype_group": "dangerous_approach_to_edge_unsafe",
+      "major_label": "dangerous_approach_to_edge_unsafe",
+      "major_label_id": 1,
+      "context_id": "dangerous_approach_to_edge",
+      "risk_level": "unsafe",
+      "text": "worker in dangerous approach to edge does not fully wear helmet and vest"
+    },
+    {
+      "prototype_id": "dangerous_approach_to_edge_unsafe::2",
+      "prototype_group": "dangerous_approach_to_edge_unsafe",
+      "major_label": "dangerous_approach_to_edge_unsafe",
+      "major_label_id": 1,
+      "context_id": "dangerous_approach_to_edge",
+      "risk_level": "unsafe",
+      "text": "worker in dangerous approach to edge violates the required ppe rule"
+    },
+    {
+      "prototype_id": "dangerous_approach_to_excavator_unsafe::0",
+      "prototype_group": "dangerous_approach_to_excavator_unsafe",
+      "major_label": "dangerous_approach_to_excavator_unsafe",
+      "major_label_id": 2,
+      "context_id": "dangerous_approach_to_excavator",
+      "risk_level": "unsafe",
+      "text": "worker in dangerous approach to excavator is missing one or more of helmet and vest"
+    },
+    {
+      "prototype_id": "dangerous_approach_to_excavator_unsafe::1",
+      "prototype_group": "dangerous_approach_to_excavator_unsafe",
+      "major_label": "dangerous_approach_to_excavator_unsafe",
+      "major_label_id": 2,
+      "context_id": "dangerous_approach_to_excavator",
+      "risk_level": "unsafe",
+      "text": "worker in dangerous approach to excavator does not fully wear helmet and vest"
+    },
+    {
+      "prototype_id": "dangerous_approach_to_excavator_unsafe::2",
+      "prototype_group": "dangerous_approach_to_excavator_unsafe",
+      "major_label": "dangerous_approach_to_excavator_unsafe",
+      "major_label_id": 2,
+      "context_id": "dangerous_approach_to_excavator",
+      "risk_level": "unsafe",
+      "text": "worker in dangerous approach to excavator violates the required ppe rule"
+    },
+    {
+      "prototype_id": "edge_work_context_unsafe::0",
+      "prototype_group": "edge_work_context_unsafe",
+      "major_label": "edge_work_context_unsafe",
+      "major_label_id": 3,
+      "context_id": "edge_work_context",
+      "risk_level": "unsafe",
+      "text": "worker in edge work context is missing one or more of helmet and vest"
+    },
+    {
+      "prototype_id": "edge_work_context_unsafe::1",
+      "prototype_group": "edge_work_context_unsafe",
+      "major_label": "edge_work_context_unsafe",
+      "major_label_id": 3,
+      "context_id": "edge_work_context",
+      "risk_level": "unsafe",
+      "text": "worker in edge work context does not fully wear helmet and vest"
+    },
+    {
+      "prototype_id": "edge_work_context_unsafe::2",
+      "prototype_group": "edge_work_context_unsafe",
+      "major_label": "edge_work_context_unsafe",
+      "major_label_id": 3,
+      "context_id": "edge_work_context",
+      "risk_level": "unsafe",
+      "text": "worker in edge work context violates the required ppe rule"
+    },
+    {
+      "prototype_id": "general_work_unsafe::0",
+      "prototype_group": "general_work_unsafe",
+      "major_label": "general_work_unsafe",
+      "major_label_id": 4,
+      "context_id": "general_work",
+      "risk_level": "unsafe",
+      "text": "worker in general work is missing one or more of helmet and vest"
+    },
+    {
+      "prototype_id": "general_work_unsafe::1",
+      "prototype_group": "general_work_unsafe",
+      "major_label": "general_work_unsafe",
+      "major_label_id": 4,
+      "context_id": "general_work",
+      "risk_level": "unsafe",
+      "text": "worker in general work does not fully wear helmet and vest"
+    },
+    {
+      "prototype_id": "general_work_unsafe::2",
+      "prototype_group": "general_work_unsafe",
+      "major_label": "general_work_unsafe",
+      "major_label_id": 4,
+      "context_id": "general_work",
+      "risk_level": "unsafe",
+      "text": "worker in general work violates the required ppe rule"
+    },
+    {
+      "prototype_id": "mechanical_operation_unsafe::0",
+      "prototype_group": "mechanical_operation_unsafe",
+      "major_label": "mechanical_operation_unsafe",
+      "major_label_id": 5,
+      "context_id": "mechanical_operation",
+      "risk_level": "unsafe",
+      "text": "worker in mechanical operation is missing one or more of helmet and vest"
+    },
+    {
+      "prototype_id": "mechanical_operation_unsafe::1",
+      "prototype_group": "mechanical_operation_unsafe",
+      "major_label": "mechanical_operation_unsafe",
+      "major_label_id": 5,
+      "context_id": "mechanical_operation",
+      "risk_level": "unsafe",
+      "text": "worker in mechanical operation does not fully wear helmet and vest"
+    },
+    {
+      "prototype_id": "mechanical_operation_unsafe::2",
+      "prototype_group": "mechanical_operation_unsafe",
+      "major_label": "mechanical_operation_unsafe",
+      "major_label_id": 5,
+      "context_id": "mechanical_operation",
+      "risk_level": "unsafe",
+      "text": "worker in mechanical operation violates the required ppe rule"
+    },
+    {
+      "prototype_id": "rebar_work_unsafe::0",
+      "prototype_group": "rebar_work_unsafe",
+      "major_label": "rebar_work_unsafe",
+      "major_label_id": 6,
+      "context_id": "rebar_work",
+      "risk_level": "unsafe",
+      "text": "worker in rebar work is missing one or more of helmet, vest, and gloves"
+    },
+    {
+      "prototype_id": "rebar_work_unsafe::1",
+      "prototype_group": "rebar_work_unsafe",
+      "major_label": "rebar_work_unsafe",
+      "major_label_id": 6,
+      "context_id": "rebar_work",
+      "risk_level": "unsafe",
+      "text": "worker in rebar work does not fully wear helmet, vest, and gloves"
+    },
+    {
+      "prototype_id": "rebar_work_unsafe::2",
+      "prototype_group": "rebar_work_unsafe",
+      "major_label": "rebar_work_unsafe",
+      "major_label_id": 6,
+      "context_id": "rebar_work",
+      "risk_level": "unsafe",
+      "text": "worker in rebar work violates the required ppe rule"
+    },
+    {
+      "prototype_id": "scaffold_work_unsafe::0",
+      "prototype_group": "scaffold_work_unsafe",
+      "major_label": "scaffold_work_unsafe",
+      "major_label_id": 8,
+      "context_id": "scaffold_work",
+      "risk_level": "unsafe",
+      "text": "worker in scaffold work is missing one or more of helmet and vest"
+    },
+    {
+      "prototype_id": "scaffold_work_unsafe::1",
+      "prototype_group": "scaffold_work_unsafe",
+      "major_label": "scaffold_work_unsafe",
+      "major_label_id": 8,
+      "context_id": "scaffold_work",
+      "risk_level": "unsafe",
+      "text": "worker in scaffold work does not fully wear helmet and vest"
+    },
+    {
+      "prototype_id": "scaffold_work_unsafe::2",
+      "prototype_group": "scaffold_work_unsafe",
+      "major_label": "scaffold_work_unsafe",
+      "major_label_id": 8,
+      "context_id": "scaffold_work",
+      "risk_level": "unsafe",
+      "text": "worker in scaffold work violates the required ppe rule"
+    },
+    {
+      "prototype_id": "tool_operation_unsafe::0",
+      "prototype_group": "tool_operation_unsafe",
+      "major_label": "tool_operation_unsafe",
+      "major_label_id": 9,
+      "context_id": "tool_operation",
+      "risk_level": "unsafe",
+      "text": "worker in tool operation is missing one or more of helmet, vest, and gloves"
+    },
+    {
+      "prototype_id": "tool_operation_unsafe::1",
+      "prototype_group": "tool_operation_unsafe",
+      "major_label": "tool_operation_unsafe",
+      "major_label_id": 9,
+      "context_id": "tool_operation",
+      "risk_level": "unsafe",
+      "text": "worker in tool operation does not fully wear helmet, vest, and gloves"
+    },
+    {
+      "prototype_id": "tool_operation_unsafe::2",
+      "prototype_group": "tool_operation_unsafe",
+      "major_label": "tool_operation_unsafe",
+      "major_label_id": 9,
+      "context_id": "tool_operation",
+      "risk_level": "unsafe",
+      "text": "worker in tool operation violates the required ppe rule"
+    }
+  ],
+  "positive_lookup": {
+    "safe|bricklaying_work": [
+      "safe::bricklaying_work::0",
+      "safe::bricklaying_work::1"
+    ],
+    "safe|dangerous_approach_to_edge": [
+      "safe::dangerous_approach_to_edge::0",
+      "safe::dangerous_approach_to_edge::1"
+    ],
+    "safe|dangerous_approach_to_excavator": [
+      "safe::dangerous_approach_to_excavator::0",
+      "safe::dangerous_approach_to_excavator::1"
+    ],
+    "safe|edge_work_context": [
+      "safe::edge_work_context::0",
+      "safe::edge_work_context::1"
+    ],
+    "safe|general_work": [
+      "safe::general_work::0",
+      "safe::general_work::1"
+    ],
+    "safe|mechanical_operation": [
+      "safe::mechanical_operation::0",
+      "safe::mechanical_operation::1"
+    ],
+    "safe|rebar_work": [
+      "safe::rebar_work::0",
+      "safe::rebar_work::1"
+    ],
+    "safe|scaffold_work": [
+      "safe::scaffold_work::0",
+      "safe::scaffold_work::1"
+    ],
+    "safe|tool_operation": [
+      "safe::tool_operation::0",
+      "safe::tool_operation::1"
+    ],
+    "bricklaying_work_unsafe|bricklaying_work": [
+      "bricklaying_work_unsafe::0",
+      "bricklaying_work_unsafe::1",
+      "bricklaying_work_unsafe::2"
+    ],
+    "dangerous_approach_to_edge_unsafe|dangerous_approach_to_edge": [
+      "dangerous_approach_to_edge_unsafe::0",
+      "dangerous_approach_to_edge_unsafe::1",
+      "dangerous_approach_to_edge_unsafe::2"
+    ],
+    "dangerous_approach_to_excavator_unsafe|dangerous_approach_to_excavator": [
+      "dangerous_approach_to_excavator_unsafe::0",
+      "dangerous_approach_to_excavator_unsafe::1",
+      "dangerous_approach_to_excavator_unsafe::2"
+    ],
+    "edge_work_context_unsafe|edge_work_context": [
+      "edge_work_context_unsafe::0",
+      "edge_work_context_unsafe::1",
+      "edge_work_context_unsafe::2"
+    ],
+    "general_work_unsafe|general_work": [
+      "general_work_unsafe::0",
+      "general_work_unsafe::1",
+      "general_work_unsafe::2"
+    ],
+    "mechanical_operation_unsafe|mechanical_operation": [
+      "mechanical_operation_unsafe::0",
+      "mechanical_operation_unsafe::1",
+      "mechanical_operation_unsafe::2"
+    ],
+    "rebar_work_unsafe|rebar_work": [
+      "rebar_work_unsafe::0",
+      "rebar_work_unsafe::1",
+      "rebar_work_unsafe::2"
+    ],
+    "scaffold_work_unsafe|scaffold_work": [
+      "scaffold_work_unsafe::0",
+      "scaffold_work_unsafe::1",
+      "scaffold_work_unsafe::2"
+    ],
+    "tool_operation_unsafe|tool_operation": [
+      "tool_operation_unsafe::0",
+      "tool_operation_unsafe::1",
+      "tool_operation_unsafe::2"
+    ]
+  }
+}

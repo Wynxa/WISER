@@ -1,0 +1,197 @@
+{
+  "meta": {
+    "version": "v1",
+    "description": "Context-aware unsafe behavior rulebook for hazard reasoning."
+  },
+  "rules": [
+    {
+      "rule_id": "R1",
+      "working_condition": "general_work",
+      "unsafe_behavior": "worker missing hardhat or reflective vest in general construction work",
+      "regulation": "worker should wear hardhat and reflective vest during general construction work",
+      "causation": [
+        "lack_of_ppe"
+      ],
+      "trigger_mode": "default",
+      "trigger_relations": [],
+      "required_ppe": [
+        "helmet",
+        "vest"
+      ],
+      "current_data_support": "strong"
+    },
+    {
+      "rule_id": "R2",
+      "working_condition": "tool_operation",
+      "unsafe_behavior": "worker uses tools without hardhat, reflective vest, or gloves",
+      "regulation": "worker should wear hardhat, reflective vest, and gloves when using tools",
+      "causation": [
+        "lack_of_ppe"
+      ],
+      "trigger_mode": "any",
+      "trigger_relations": [
+        {
+          "predicate": "using",
+          "object_name": "tools"
+        }
+      ],
+      "required_ppe": [
+        "helmet",
+        "vest",
+        "gloves"
+      ],
+      "current_data_support": "strong"
+    },
+    {
+      "rule_id": "R3",
+      "working_condition": "rebar_work",
+      "unsafe_behavior": "worker in rebar work area without hardhat, reflective vest, or gloves",
+      "regulation": "worker should wear hardhat, reflective vest, and gloves in rebar work area",
+      "causation": [
+        "lack_of_ppe"
+      ],
+      "trigger_mode": "any",
+      "trigger_relations": [
+        {
+          "predicate": "near",
+          "object_name": "rebar_zone"
+        },
+        {
+          "predicate": "standing_on",
+          "object_name": "rebar_zone"
+        }
+      ],
+      "required_ppe": [
+        "helmet",
+        "vest",
+        "gloves"
+      ],
+      "current_data_support": "strong"
+    },
+    {
+      "rule_id": "R4",
+      "working_condition": "bricklaying_work",
+      "unsafe_behavior": "worker in bricklaying area without hardhat, reflective vest, or gloves",
+      "regulation": "worker should wear hardhat, reflective vest, and gloves when bricklaying",
+      "causation": [
+        "lack_of_ppe"
+      ],
+      "trigger_mode": "any",
+      "trigger_relations": [
+        {
+          "predicate": "near",
+          "object_name": "bricklaying_zone"
+        }
+      ],
+      "required_ppe": [
+        "helmet",
+        "vest",
+        "gloves"
+      ],
+      "current_data_support": "medium"
+    },
+    {
+      "rule_id": "R5",
+      "working_condition": "mechanical_operation",
+      "unsafe_behavior": "worker operates excavator without hardhat or reflective vest",
+      "regulation": "worker should wear hardhat and reflective vest when operating excavator",
+      "causation": [
+        "lack_of_ppe"
+      ],
+      "trigger_mode": "any",
+      "trigger_relations": [
+        {
+          "predicate": "operating",
+          "object_name": "excavator"
+        }
+      ],
+      "required_ppe": [
+        "helmet",
+        "vest"
+      ],
+      "current_data_support": "strong"
+    },
+    {
+      "rule_id": "R6",
+      "working_condition": "excavation_proximity",
+      "unsafe_behavior": "worker approaches excavator without PPE or safe distance",
+      "regulation": "worker near excavator should wear hardhat and reflective vest and keep safety distance",
+      "causation": [
+        "lack_of_ppe",
+        "dangerous_distance_approach"
+      ],
+      "trigger_mode": "any",
+      "trigger_relations": [
+        {
+          "predicate": "next_to",
+          "object_name": "excavator"
+        }
+      ],
+      "required_ppe": [
+        "helmet",
+        "vest"
+      ],
+      "current_data_support": "medium"
+    },
+    {
+      "rule_id": "R7",
+      "working_condition": "scaffold_work",
+      "unsafe_behavior": "worker on scaffold without hardhat or reflective vest",
+      "regulation": "worker on scaffold should wear hardhat and reflective vest",
+      "causation": [
+        "lack_of_ppe"
+      ],
+      "trigger_mode": "any",
+      "trigger_relations": [
+        {
+          "predicate": "standing_on",
+          "object_name": "scaffold"
+        }
+      ],
+      "required_ppe": [
+        "helmet",
+        "vest"
+      ],
+      "current_data_support": "medium"
+    },
+    {
+      "rule_id": "R8",
+      "working_condition": "edge_work",
+      "unsafe_behavior": "worker near unprotected edge without hardhat or reflective vest",
+      "regulation": "worker near unprotected edge should wear hardhat and reflective vest and avoid dangerous approach",
+      "causation": [
+        "lack_of_ppe",
+        "dangerous_approach"
+      ],
+      "trigger_mode": "any",
+      "trigger_relations": [
+        {
+          "predicate": "next_to",
+          "object_name": "unprotected_edge"
+        }
+      ],
+      "required_ppe": [
+        "helmet",
+        "vest"
+      ],
+      "current_data_support": "medium"
+    },
+    {
+      "rule_id": "R9",
+      "working_condition": "welding_work",
+      "unsafe_behavior": "worker welds without hardhat, gloves, or facial mask",
+      "regulation": "worker should wear hardhat, gloves, and facial mask during welding",
+      "causation": [
+        "lack_of_ppe"
+      ],
+      "trigger_mode": "reserved",
+      "trigger_relations": [],
+      "required_ppe": [
+        "helmet",
+        "gloves",
+        "face_mask"
+      ],
+      "current_data_support": "weak"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "clean": {
+    "matched_samples": 7850,
+    "unique_observed_texts": 215,
+    "conflicting_texts": 0,
+    "samples_in_conflicting_texts": 0,
+    "retrospective_exact_text_accuracy_ceiling": 1.0,
+    "ceiling_is_test_label_diagnostic_not_trainable_baseline": true,
+    "actual_deleted_edges": 0,
+    "original_edges": 11760,
+    "corrupted_rule_disagreement_rate": 0.0
+  },
+  "d1_0.10": {
+    "matched_samples": 7850,
+    "unique_observed_texts": 208,
+    "conflicting_texts": 22,
+    "samples_in_conflicting_texts": 5799,
+    "retrospective_exact_text_accuracy_ceiling": 0.9594904458598726,
+    "ceiling_is_test_label_diagnostic_not_trainable_baseline": true,
+    "actual_deleted_edges": 1123,
+    "original_edges": 11760,
+    "corrupted_rule_disagreement_rate": 0.045859872611464965
+  },
+  "d1_0.30": {
+    "matched_samples": 7850,
+    "unique_observed_texts": 175,
+    "conflicting_texts": 31,
+    "samples_in_conflicting_texts": 6697,
+    "retrospective_exact_text_accuracy_ceiling": 0.8853503184713376,
+    "ceiling_is_test_label_diagnostic_not_trainable_baseline": true,
+    "actual_deleted_edges": 3440,
+    "original_edges": 11760,
+    "corrupted_rule_disagreement_rate": 0.1373248407643312
+  },
+  "d1_0.50": {
+    "matched_samples": 7850,
+    "unique_observed_texts": 134,
+    "conflicting_texts": 32,
+    "samples_in_conflicting_texts": 7264,
+    "retrospective_exact_text_accuracy_ceiling": 0.8082802547770701,
+    "ceiling_is_test_label_diagnostic_not_trainable_baseline": true,
+    "actual_deleted_edges": 5818,
+    "original_edges": 11760,
+    "corrupted_rule_disagreement_rate": 0.22509554140127389
+  },
+  "d5_1.00": {
+    "matched_samples": 7850,
+    "unique_observed_texts": 42,
+    "conflicting_texts": 12,
+    "samples_in_conflicting_texts": 7585,
+    "retrospective_exact_text_accuracy_ceiling": 0.7419108280254777,
+    "ceiling_is_test_label_diagnostic_not_trainable_baseline": true,
+    "actual_deleted_edges": 3388,
+    "original_edges": 11760,
+    "corrupted_rule_disagreement_rate": 0.26025477707006367
+  }
+}
